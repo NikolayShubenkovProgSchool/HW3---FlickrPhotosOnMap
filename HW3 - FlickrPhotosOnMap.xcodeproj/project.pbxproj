@@ -10,13 +10,14 @@
 		06A1285D4D3E725C3E2F4C2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559D9E31DE55A031ACD0B0C /* libPods.a */; };
 		82CEC0D819E6E46900AD9EF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0D719E6E46900AD9EF0 /* main.m */; };
 		82CEC0DB19E6E46900AD9EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0DA19E6E46900AD9EF0 /* AppDelegate.m */; };
-		82CEC0DE19E6E46900AD9EF0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0DD19E6E46900AD9EF0 /* ViewController.m */; };
 		82CEC0E119E6E46900AD9EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CEC0DF19E6E46900AD9EF0 /* Main.storyboard */; };
 		82CEC0E319E6E46900AD9EF0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82CEC0E219E6E46900AD9EF0 /* Images.xcassets */; };
 		82CEC0E619E6E46900AD9EF0 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CEC0E419E6E46900AD9EF0 /* LaunchScreen.xib */; };
 		82CEC0F219E6E46900AD9EF0 /* HW3___FlickrPhotosOnMapTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0F119E6E46900AD9EF0 /* HW3___FlickrPhotosOnMapTests.m */; };
 		82CEC10319E6F1D800AD9EF0 /* AFPFlickrClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC10219E6F1D800AD9EF0 /* AFPFlickrClient.m */; };
 		82CEC10619E732B300AD9EF0 /* AFPMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC10519E732B300AD9EF0 /* AFPMapViewController.m */; };
+		82CEC10919E734B800AD9EF0 /* AFPFlickrPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC10819E734B800AD9EF0 /* AFPFlickrPhoto.m */; };
+		82CEC10D19E7389400AD9EF0 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82CEC10C19E7389400AD9EF0 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +38,6 @@
 		82CEC0D719E6E46900AD9EF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		82CEC0D919E6E46900AD9EF0 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		82CEC0DA19E6E46900AD9EF0 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		82CEC0DC19E6E46900AD9EF0 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		82CEC0DD19E6E46900AD9EF0 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		82CEC0E019E6E46900AD9EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		82CEC0E219E6E46900AD9EF0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		82CEC0E519E6E46900AD9EF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -49,6 +48,9 @@
 		82CEC10219E6F1D800AD9EF0 /* AFPFlickrClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPFlickrClient.m; sourceTree = "<group>"; };
 		82CEC10419E732B300AD9EF0 /* AFPMapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPMapViewController.h; sourceTree = "<group>"; };
 		82CEC10519E732B300AD9EF0 /* AFPMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPMapViewController.m; sourceTree = "<group>"; };
+		82CEC10719E734B800AD9EF0 /* AFPFlickrPhoto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPFlickrPhoto.h; sourceTree = "<group>"; };
+		82CEC10819E734B800AD9EF0 /* AFPFlickrPhoto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPFlickrPhoto.m; sourceTree = "<group>"; };
+		82CEC10C19E7389400AD9EF0 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9559D9E31DE55A031ACD0B0C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -57,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82CEC10D19E7389400AD9EF0 /* MapKit.framework in Frameworks */,
 				06A1285D4D3E725C3E2F4C2F /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +86,7 @@
 		3E79D3FA4E8C70D8C3CAAB39 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				82CEC10C19E7389400AD9EF0 /* MapKit.framework */,
 				9559D9E31DE55A031ACD0B0C /* libPods.a */,
 			);
 			name = Frameworks;
@@ -115,10 +119,10 @@
 				82CEC0DA19E6E46900AD9EF0 /* AppDelegate.m */,
 				82CEC10119E6F1D800AD9EF0 /* AFPFlickrClient.h */,
 				82CEC10219E6F1D800AD9EF0 /* AFPFlickrClient.m */,
-				82CEC0DC19E6E46900AD9EF0 /* ViewController.h */,
-				82CEC0DD19E6E46900AD9EF0 /* ViewController.m */,
 				82CEC10419E732B300AD9EF0 /* AFPMapViewController.h */,
 				82CEC10519E732B300AD9EF0 /* AFPMapViewController.m */,
+				82CEC10719E734B800AD9EF0 /* AFPFlickrPhoto.h */,
+				82CEC10819E734B800AD9EF0 /* AFPFlickrPhoto.m */,
 				82CEC0DF19E6E46900AD9EF0 /* Main.storyboard */,
 				82CEC0E219E6E46900AD9EF0 /* Images.xcassets */,
 				82CEC0E419E6E46900AD9EF0 /* LaunchScreen.xib */,
@@ -288,11 +292,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				82CEC0DE19E6E46900AD9EF0 /* ViewController.m in Sources */,
 				82CEC10319E6F1D800AD9EF0 /* AFPFlickrClient.m in Sources */,
 				82CEC0DB19E6E46900AD9EF0 /* AppDelegate.m in Sources */,
 				82CEC10619E732B300AD9EF0 /* AFPMapViewController.m in Sources */,
 				82CEC0D819E6E46900AD9EF0 /* main.m in Sources */,
+				82CEC10919E734B800AD9EF0 /* AFPFlickrPhoto.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

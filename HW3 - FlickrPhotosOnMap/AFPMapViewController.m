@@ -7,8 +7,12 @@
 //
 
 #import "AFPMapViewController.h"
+#import "AFPFlickrClient.h"
+#import <MapKit/MapKit.h>
 
-@interface AFPMapViewController ()
+@interface AFPMapViewController () <MKMapViewDelegate>
+
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 @end
 
@@ -17,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [[[AFPFlickrClient alloc] init] getPhotosInRadius:20];
 }
 
 - (void)didReceiveMemoryWarning {

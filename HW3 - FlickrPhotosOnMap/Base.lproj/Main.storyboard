@@ -18,6 +18,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jtZ-FR-bBX">
                                 <rect key="frame" x="0.0" y="64" width="768" height="960"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Ccb-iu-sTg"/>
+                                </connections>
                             </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -25,7 +28,7 @@
                     <navigationItem key="navigationItem" id="HvN-yh-bSs"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
-                        <outlet property="mapView" destination="jtZ-FR-bBX" id="Vnf-ow-nYO"/>
+                        <outlet property="mapView" destination="jtZ-FR-bBX" id="hdw-JT-oaD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
