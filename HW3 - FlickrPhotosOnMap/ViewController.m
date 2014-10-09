@@ -21,7 +21,7 @@
     [super viewDidLoad];
 
     AFPFlickrClient *client = [[AFPFlickrClient alloc] init];
-    [client getPhotosInRadius:32];
+    [client getPhotosInRadius:0];
     
 }
 
