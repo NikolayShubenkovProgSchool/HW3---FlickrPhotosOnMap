@@ -59,4 +59,28 @@
 }
 
 
+#pragma mark - MKMapViewDelegate
+
+
+- (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation {
+    if (![annotation isKindOfClass:[AFPFlickrPhoto class]]){
+        return nil;
+    }
+    NSString *identifier = @"AFPFlickrPhotoAnnotation";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if (!annotationView){
+        annotationView = [[MKAnnotationView alloc]initWithAnnotation:annotation
+                                                     reuseIdentifier:identifier];
+    }
+    AFPFlickrPhoto *flickrphoto = annotation;
+    NSURL *previewURL = flickrphoto.smallImage;
+    NSData *data=[NSData dataWithContentsOfURL:previewURL];
+    annotationView.image = [UIImage imageWithData:data];
+    annotationView.canShowCallout = YES;
+    
+    return annotationView;
+
+}
+
+
 @end
