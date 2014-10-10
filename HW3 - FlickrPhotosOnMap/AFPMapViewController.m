@@ -34,7 +34,7 @@
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         
         AFPFlickrClient *flickrClient = [[AFPFlickrClient alloc] init];
-        [flickrClient getPhotosInRadius:20 completion:^(NSArray *dictsArray) {
+        [flickrClient getPhotosInRadius:5 completion:^(NSArray *dictsArray) {
             NSArray *tempArray = [AFPFlickrPhotoParser parsePhotosFromDictsArray:dictsArray];
             NSAssert(tempArray, @"Parser returned nil");
 

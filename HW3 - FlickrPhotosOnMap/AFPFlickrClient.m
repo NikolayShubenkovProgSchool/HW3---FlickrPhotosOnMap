@@ -30,9 +30,11 @@ static NSString *api_key = @"52522cd09d43428026b9eff49fe493f7";
     
     NSDictionary *parameters = @{@"method" :@"flickr.photos.search",
                                  @"api_key":api_key,
-                                 @"lat":@(55),
-                                 @"lon":@(37),
+                                 @"lat":@(55.75370f),
+                                 @"lon":@(37.61981f),
                                  @"radius":@(radius),
+                                 @"per_page":@(30),
+                                 @"page":@(1),
                                  @"format":@"json",
                                  @"nojsoncallback":@"1",
                                  @"extras":@"geo, url_sq, url_o"};
