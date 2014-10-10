@@ -10,15 +10,19 @@
 
 @implementation AFPFlickrPhoto
 
-- (instancetype)initWithInfo:(NSDictionary *)info {
+- (instancetype)initWithTitle:(NSString *)title
+                   smallImage:(NSURL *)smallImage
+                originalImage:(NSURL *)originalImage
+                   coordinate:(CLLocationCoordinate2D)coordinate
+{
     self = [super init];
     if (self) {
-        _info = [info copy];
-//        _coordinate = ;
-//        _smallImage = ;
+        _title = title;
+        _smallImage = smallImage;
+        _originalImage = originalImage;
+        _coordinate = coordinate;
     }
     return self;
 }
-
 
 @end

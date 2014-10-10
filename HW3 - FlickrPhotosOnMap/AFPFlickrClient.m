@@ -40,6 +40,7 @@ static NSString *api_key = @"52522cd09d43428026b9eff49fe493f7";
     [self GET:@""
    parameters:parameters
       success:^(AFHTTPRequestOperation *operation, id responseObject) {
+          NSArray *dictsArray = responseObject[@"photos"][@"photo"];
           NSLog(@"%@", responseObject);
       }
       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
