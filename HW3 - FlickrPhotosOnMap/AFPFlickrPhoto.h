@@ -10,12 +10,12 @@
 #import <UIKit/UIKit.h>
 #import <MapKit/MKAnnotation.h>
 
-@interface AFPFlickrPhoto : NSObject
+@interface AFPFlickrPhoto : NSObject <MKAnnotation>
 
-@property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+@property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;
 @property (nonatomic, strong, readonly) NSURL *smallImage;
 @property (nonatomic, strong, readonly) NSURL *originalImage;
-@property (nonatomic, strong, readonly) NSString *title;
+@property (nonatomic, copy, readonly) NSString *title;
 
 - (instancetype)initWithTitle:(NSString *)title
                    smallImage:(NSURL *)smallImage

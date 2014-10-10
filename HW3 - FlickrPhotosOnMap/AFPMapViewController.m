@@ -7,12 +7,15 @@
 //
 
 #import "AFPMapViewController.h"
-#import "AFPFlickrClient.h"
 #import <MapKit/MapKit.h>
+#import "AFPFlickrClient.h"
+#import "AFPFlickrPhoto.h"
+#import "AFPFlickrPhotoParser.h"
 
 @interface AFPMapViewController () <MKMapViewDelegate>
 
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) NSArray *photosArray;
 
 @end
 
@@ -20,23 +23,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    [[[AFPFlickrClient alloc] init] getPhotosInRadius:20];
+    
+    [self getPhotosFromServerAndParse];
+    
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - Private
+
+- (void)getPhotosFromServerAndParse {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        
+        AFPFlickrClient *flickrClient = [[AFPFlickrClient alloc] init];
+        [flickrClient getPhotosInRadius:20 completion:^(NSArray *dictsArray) {
+            NSArray *tempArray = [AFPFlickrPhotoParser parsePhotosFromDictsArray:dictsArray];
+            NSAssert(tempArray, @"Parser returned nil");
+
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self addPreviewsOnMap:tempArray];
+            });
+
+        }];
+        
+    });
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)addPreviewsOnMap:(NSArray *)photosArray {
+    self.photosArray = photosArray;
+    [self.mapView removeAnnotations:self.mapView.annotations];
+    
+    [self.mapView addAnnotations:self.photosArray];
+    
+    [self.mapView showAnnotations:self.photosArray
+                         animated:YES];
 }
-*/
+
 
 @end

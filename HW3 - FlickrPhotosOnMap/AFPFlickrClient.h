@@ -10,6 +10,6 @@
 
 @interface AFPFlickrClient : AFHTTPRequestOperationManager
 
-- (void)getPhotosInRadius:(NSInteger)radius;
+- (void)getPhotosInRadius:(NSInteger)radius completion:(void(^)(NSArray *dictsArray))completionBlock;
 
 @end

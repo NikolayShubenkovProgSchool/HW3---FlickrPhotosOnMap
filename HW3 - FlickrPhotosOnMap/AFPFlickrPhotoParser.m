@@ -15,11 +15,19 @@
 + (NSArray *)parsePhotosFromDictsArray:(NSArray *)dictsArray {
     NSMutableArray *photosArray = [NSMutableArray array];
     CLLocationCoordinate2D coordinate;
-    
+    NSString *tempString;
     for (NSDictionary *dict in dictsArray) {
         NSString *title = dict[@"title"];
-        NSURL *smallImage = [[NSURL alloc] initWithString:dict[@"url_sq"]];
-        NSURL *originalImage = [[NSURL alloc] initWithString:dict[@"url_o"]];
+        tempString = dict[@"url_sq"];
+        if (!tempString) {
+            continue;
+        }
+        NSURL *smallImage = [[NSURL alloc] initWithString:tempString];
+        tempString = dict[@"url_o"];
+        if (!tempString) {
+            continue;
+        }
+        NSURL *originalImage = [[NSURL alloc] initWithString:tempString];
         coordinate.latitude = [dict[@"latitude"] doubleValue];
         coordinate.longitude = [dict[@"longitude"] doubleValue];
         
