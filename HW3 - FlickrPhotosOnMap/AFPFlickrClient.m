@@ -8,8 +8,11 @@
 
 #import "AFPFlickrClient.h"
 #import "AFNetworking.h"
+#import "AFPFlickrPhoto.h"
 
 @implementation AFPFlickrClient
+
+static NSString *api_key = @"52522cd09d43428026b9eff49fe493f7";
 
 - (instancetype)init
 {
@@ -26,12 +29,13 @@
     NSAssert(radius > 0 && radius <= 32, @"Incorrect radius value. Must be from 0 to 32");
     
     NSDictionary *parameters = @{@"method" :@"flickr.photos.search",
-                                 @"api_key":@"52522cd09d43428026b9eff49fe493f7",
+                                 @"api_key":api_key,
                                  @"lat":@(55),
                                  @"lon":@(37),
                                  @"radius":@(radius),
                                  @"format":@"json",
-                                 @"nojsoncallback":@"1"};
+                                 @"nojsoncallback":@"1",
+                                 @"extras":@"geo, url_sq, url_o"};
     
     [self GET:@""
    parameters:parameters
@@ -41,8 +45,6 @@
       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           NSLog(@"We have some problems. Error: %@", error);
       }];
-    
-    
 }
 
 @end
