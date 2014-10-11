@@ -48,7 +48,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B64-Li-vcV">
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="downloading.png" translatesAutoresizingMaskIntoConstraints="NO" id="B64-Li-vcV">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
                         </subviews>
@@ -83,4 +83,7 @@
             <point key="canvasLocation" x="510" y="-388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="downloading.png" width="200" height="100"/>
+    </resources>
 </document>
