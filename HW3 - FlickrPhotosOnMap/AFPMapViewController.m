@@ -92,6 +92,7 @@
     AFPFullscreenFlickrPhotoViewController *flvc = [self.storyboard instantiateViewControllerWithIdentifier:@"AFPFullscreenFlickrPhotoViewController"];
     AFPFlickrPhoto *flickrphoto = view.annotation;
     flvc.originalImageURL = flickrphoto.originalImageURL;
+    flvc.navigationItem.title = flickrphoto.title;
     [self.navigationController pushViewController:flvc animated:YES];
 }
 
