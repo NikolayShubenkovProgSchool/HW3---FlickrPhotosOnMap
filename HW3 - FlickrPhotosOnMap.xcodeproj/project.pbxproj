@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06A1285D4D3E725C3E2F4C2F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9559D9E31DE55A031ACD0B0C /* libPods.a */; };
 		8270E37119E7DE2E003BAF4E /* AFPFlickrPhotoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 8270E37019E7DE2E003BAF4E /* AFPFlickrPhotoParser.m */; };
+		82AA66E819E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 82AA66E719E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.m */; };
 		82CEC0D819E6E46900AD9EF0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0D719E6E46900AD9EF0 /* main.m */; };
 		82CEC0DB19E6E46900AD9EF0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 82CEC0DA19E6E46900AD9EF0 /* AppDelegate.m */; };
 		82CEC0E119E6E46900AD9EF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82CEC0DF19E6E46900AD9EF0 /* Main.storyboard */; };
@@ -36,6 +37,8 @@
 		8270E36F19E7DE2E003BAF4E /* AFPFlickrPhotoParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPFlickrPhotoParser.h; sourceTree = "<group>"; };
 		8270E37019E7DE2E003BAF4E /* AFPFlickrPhotoParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPFlickrPhotoParser.m; sourceTree = "<group>"; };
 		829D0E077005FC3CEBBE2600 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		82AA66E619E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFPFullscreenFlickrPhotoViewController.h; sourceTree = "<group>"; };
+		82AA66E719E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFPFullscreenFlickrPhotoViewController.m; sourceTree = "<group>"; };
 		82CEC0D219E6E46800AD9EF0 /* HW3 - FlickrPhotosOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "HW3 - FlickrPhotosOnMap.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		82CEC0D619E6E46900AD9EF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		82CEC0D719E6E46900AD9EF0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -128,6 +131,8 @@
 				82CEC10819E734B800AD9EF0 /* AFPFlickrPhoto.m */,
 				8270E36F19E7DE2E003BAF4E /* AFPFlickrPhotoParser.h */,
 				8270E37019E7DE2E003BAF4E /* AFPFlickrPhotoParser.m */,
+				82AA66E619E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.h */,
+				82AA66E719E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.m */,
 				82CEC0DF19E6E46900AD9EF0 /* Main.storyboard */,
 				82CEC0E219E6E46900AD9EF0 /* Images.xcassets */,
 				82CEC0E419E6E46900AD9EF0 /* LaunchScreen.xib */,
@@ -301,6 +306,7 @@
 				82CEC0DB19E6E46900AD9EF0 /* AppDelegate.m in Sources */,
 				8270E37119E7DE2E003BAF4E /* AFPFlickrPhotoParser.m in Sources */,
 				82CEC10619E732B300AD9EF0 /* AFPMapViewController.m in Sources */,
+				82AA66E819E9093C00D4AA46 /* AFPFullscreenFlickrPhotoViewController.m in Sources */,
 				82CEC0D819E6E46900AD9EF0 /* main.m in Sources */,
 				82CEC10919E734B800AD9EF0 /* AFPFlickrPhoto.m in Sources */,
 			);

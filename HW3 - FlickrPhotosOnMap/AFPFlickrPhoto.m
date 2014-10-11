@@ -18,8 +18,8 @@
     self = [super init];
     if (self) {
         _title = title;
-        _smallImage = smallImage;
-        _originalImage = originalImage;
+        _smallImageURL = smallImage;
+        _originalImageURL = originalImage;
         _coordinate = coordinate;
     }
     return self;

@@ -11,6 +11,7 @@
 #import "AFPFlickrClient.h"
 #import "AFPFlickrPhoto.h"
 #import "AFPFlickrPhotoParser.h"
+#import "AFPFullscreenFlickrPhotoViewController.h"
 
 @interface AFPMapViewController () <MKMapViewDelegate>
 
@@ -74,7 +75,7 @@
                                                      reuseIdentifier:identifier];
     }
     AFPFlickrPhoto *flickrphoto = annotation;
-    NSURL *previewURL = flickrphoto.smallImage;
+    NSURL *previewURL = flickrphoto.smallImageURL;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         NSData *data=[NSData dataWithContentsOfURL:previewURL];
         dispatch_async(dispatch_get_main_queue(), ^{
@@ -85,7 +86,13 @@
     annotationView.canShowCallout = YES;
     
     return annotationView;
+}
 
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view {
+    AFPFullscreenFlickrPhotoViewController *flvc = [self.storyboard instantiateViewControllerWithIdentifier:@"AFPFullscreenFlickrPhotoViewController"];
+    AFPFlickrPhoto *flickrphoto = view.annotation;
+    flvc.originalImageURL = flickrphoto.originalImageURL;
+    [self.navigationController pushViewController:flvc animated:YES];
 }
 
 

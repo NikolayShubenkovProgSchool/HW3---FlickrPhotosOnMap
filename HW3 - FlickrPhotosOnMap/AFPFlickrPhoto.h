@@ -13,8 +13,8 @@
 @interface AFPFlickrPhoto : NSObject <MKAnnotation>
 
 @property (nonatomic, assign, readonly) CLLocationCoordinate2D coordinate;
-@property (nonatomic, strong, readonly) NSURL *smallImage;
-@property (nonatomic, strong, readonly) NSURL *originalImage;
+@property (nonatomic, strong, readonly) NSURL *smallImageURL;
+@property (nonatomic, strong, readonly) NSURL *originalImageURL;
 @property (nonatomic, copy, readonly) NSString *title;
 
 - (instancetype)initWithTitle:(NSString *)title

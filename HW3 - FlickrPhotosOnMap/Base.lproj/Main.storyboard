@@ -29,11 +29,39 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="mapView" destination="jtZ-FR-bBX" id="hdw-JT-oaD"/>
+                        <segue destination="fAB-fS-Zik" kind="show" identifier="SegueToFullScreenImageViewController" id="8q9-P9-nh2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1443" y="-388"/>
+        </scene>
+        <!--Fullscreen Flickr Photo View Controller-->
+        <scene sceneID="SBL-Qt-2G7">
+            <objects>
+                <viewController storyboardIdentifier="AFPFullscreenFlickrPhotoViewController" id="fAB-fS-Zik" customClass="AFPFullscreenFlickrPhotoViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e1X-6G-y65"/>
+                        <viewControllerLayoutGuide type="bottom" id="MT8-Mo-vTT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="iln-3d-dac">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B64-Li-vcV">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="imageView" destination="B64-Li-vcV" id="CwD-hj-Jii"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iuZ-UK-aQi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2350" y="-388"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JEd-a4-zTX">
